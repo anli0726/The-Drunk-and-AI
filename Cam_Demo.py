@@ -1,13 +1,6 @@
 import face_recognition
 import cv2
 
-# This is a super simple (but slow) example of running face recognition on live video from your webcam.
-# There's a second example that's a little more complicated but runs faster.
-
-# PLEASE NOTE: This example requires OpenCV (the `cv2` library) to be installed only to read from your webcam.
-# OpenCV is *not* required to use the face_recognition library. It's only required if you want to run this
-# specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
-
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
@@ -78,7 +71,7 @@ while True:
             else:
                 if steady_time < 5:
                     #cv2.rectangle(frame, system_box[0], system_box[1], (0, 0, 255), cv2.FILLED)
-                    cv2.putText(frame, "Detecting... Please Use Your ", (65, 65), font, 1.0, (255, 0, 0), 2)
+                    cv2.putText(frame, "Recording... Please Use Your ", (65, 65), font, 1.0, (255, 0, 0), 2)
                     cv2.putText(frame, "Eyes to Track the Blue Block", (65, 100), font, 1.0, (255, 0, 0), 2)
                     if x==0:
                         flip = 1
